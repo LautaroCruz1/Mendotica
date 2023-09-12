@@ -7,11 +7,10 @@ body {
   padding-bottom: 3rem;
   color: black;
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(225, 255, 253);
+  background-color: rgb(255, 255, 255);
 }
 
 /* fuente */
-
 
 a {
   text-decoration: none;
@@ -21,8 +20,54 @@ a {
 /* SIZES */
 
 .navsize {
-  height: 85px;
+  height: 95px;
 }
+
+/* Barra de busqueda */
+.search{
+  height: 40px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.search-input{
+  color: white;
+  border:0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top:-25px;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+
+}
+
+.search .search-input{
+  width: 350px;
+  caret-color: #536bf6;
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  transition: width 0.4s linear;
+}
+
+.search-icon{
+  height: 30px;
+  width: 30px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #87877e;
+  margin-top:-5px;
+
+}
+a:link{
+  text-decoration: none;
+}
+
 
 /* COLORES Y FUENTE DE MARCA */
 .brandcolor {
@@ -41,8 +86,6 @@ a {
   box-shadow: 1px 1px 8px #000000;
 }
 
-
-
 .shadowG {
   text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); 
 
@@ -53,7 +96,6 @@ a {
     font-size: 3.5rem;
   }
 }
-
 
 .b-example-divider {
   height: 3rem;
