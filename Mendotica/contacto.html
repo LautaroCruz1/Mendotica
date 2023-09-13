@@ -12,6 +12,7 @@
     <title>Mendotica|Contacto</title>
     <!--LINKS DE BOOTSTRAP Y FONTAWESOME-->
     <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/643b5e8970.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link href="carousel.css" rel="stylesheet">
   </head>
@@ -25,13 +26,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
           <li class="nav-item">
             <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <a class="nav-link active brandfont" href="#" style="color: black;">Servicios <span class="badge border" style="color: black;">5</span></a>
+              <a class="nav-link active brandfont" href="#" style="color: black;">Servicios</a>
               <div class="dropdown-content">
                 <a href="incendios.html">Sistema contra incendios</a>
                 <a href="electricidad.html">Sistema de electricidad</a>
@@ -43,7 +44,17 @@
           <li class="nav-item">
             <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
+          </li>
         </ul>
+        <div class="d-flex justify-content-center h-100">
+          <div class="search">
+              <input type="text" class="search-input" placeholder="Buscar..." name="">
+              <a href="#" class="search-icon">
+                  <i class="fa fa-search"></i>
+              </a>
+          </div>
       </div>
     </div>
   </nav>
@@ -52,15 +63,22 @@
 <main>
 
   <!--FORMULARIO-->
-  <h2>Formulario de Contacto</h2>
+<div class="d-flex justify-content-center formulario">
     <form action="procesar_formulario.php" method="POST">
+      <br>
+      <br>
+      <h3 class="h2">¡Hacenos tu consulta!</h3>
         <!-- Campo de texto para el nombre -->
-        <label for="nombre">Nombre:</label>
+        <label for="nombre">Nombre y apellido:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
         <!-- Campo de correo electrónico -->
         <label for="correo">Correo electrónico:</label>
         <input type="email" id="correo" name="correo" required><br><br>
+
+         <!-- Campo de numero telefonico-->
+        <label for="numero">Numero de teléfono</label>
+        <input type="tel" id="numero" name="numero"><br><br>
 
         <!-- Campo de selección (por ejemplo, para elegir un motivo de contacto) -->
         <label for="motivo">Motivo de contacto:</label>
@@ -77,6 +95,7 @@
         <!-- Botón de envío -->
         <input type="submit" value="Enviar">
     </form>
+</div>
 
   
     <!--BOTON DE WHATSAPP-->
