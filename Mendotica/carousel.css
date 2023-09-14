@@ -400,6 +400,13 @@ button img{
   border-radius: 100%;
 }
 
+/* FORMULARIO (CONTACTO) */
+
+.formulario {
+  padding: 20px;
+  border: 1px solid #000000;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
