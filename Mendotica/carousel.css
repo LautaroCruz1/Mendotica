@@ -408,7 +408,7 @@ button img{
   height: 100vh;
 }
 
-form {
+.form {
   position: absolute;
   top: 70%;
   left: 50%;
@@ -421,8 +421,32 @@ form {
   transform: translate(-50%, -50%);
 }
 
+/* SISTEMA DE INCENDIOS
+-------------------------------------------------- */
+
+.parrafo{
+  margin-top: -20;
+  margin-bottom: 1rem;
+}
 
 
+.carousel-control-prev{
+  font-size: 24px; /* Tamaño de fuente */
+  background-color: transparent; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Quitar el borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.carousel-control-next{
+  font-size: 50px; /* Tamaño de fuente */
+  background-color: transparent; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Quitar el borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
 
 
 
@@ -450,4 +474,6 @@ form {
     margin-top: 7rem;
   }
 }
+
+
 
