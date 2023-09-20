@@ -210,10 +210,10 @@ a:link{
 }
 
 .imgRedonda {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 46%;
+  object-fit: contain;
   filter: saturate(1.2);
   box-shadow: 1px 1px 3px #000000
 }
@@ -399,7 +399,7 @@ button img{
   height: 35px;
   border-radius: 100%;
 }
-
+ 
 /* FORMULARIO (CONTACTO) */
 
 .contenedor {
@@ -408,7 +408,7 @@ button img{
   height: 100vh;
 }
 
-form {
+.form {
   position: absolute;
   top: 70%;
   left: 50%;
@@ -420,14 +420,6 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
-
-
-
-
-
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
