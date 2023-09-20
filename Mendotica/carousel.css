@@ -392,6 +392,7 @@ a:link{
   width: 100%;
   margin-bottom: 5px;
   opacity: 1;
+  z-index: 1;
 }
 
 
@@ -431,21 +432,24 @@ button img{
 
 
 .carousel-control-prev{
-  font-size: 24px; /* Tamaño de fuente */
   background-color: transparent; /* Color de fondo */
   color: #fff; /* Color del texto */
   border: none; /* Quitar el borde */
-  padding: 10px 20px; /* Espaciado interno */
+  padding: 50px 20px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
+  position: absolute;
+  top: -30%;
+  
 }
 
 .carousel-control-next{
-  font-size: 50px; /* Tamaño de fuente */
   background-color: transparent; /* Color de fondo */
   color: #fff; /* Color del texto */
   border: none; /* Quitar el borde */
-  padding: 10px 20px; /* Espaciado interno */
+  padding: 50px 20px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
+  position: absolute;
+  top: -30%;
 }
 
 
