@@ -16,49 +16,55 @@
     <!-- Custom CSS -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body> 
-<!--BODY-->
-<header> <!--NAV-->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow ">
-    <div class="container-fluid">
-      <a class="navbar-brand brandfont" href="index.html"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
-          <li class="nav-item">
-            <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="nav-link active brandfont" href="#" style="color: black;">Servicios</a>
-              <div class="dropdown-content">
-                <a href="incendios.html">Sistema contra incendios</a>
-                <a href="electricidad.html">Sistema de electricidad</a>
-                <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
-                <a href="acceso.html">Sistema de control de acceso</a>
-                <a href="alarmas.html">Sistema de Alarmas</a>
+  <body onclick="hide_sugg()">
+    <header> <!--NAV-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
+          <div class="container-fluid">
+            <a class="navbar-brand brandfont" href="#"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="nav-link active brandfont" href="#" style="color: black;">Servicios</a>
+                    <div class="dropdown-content">
+                      <a href="incendios.html">Sistema contra incendios</a>
+                      <a href="electricidad.html">Sistema de electricidad</a>
+                      <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
+                      <a href="acceso.html">Sistema de control de acceso</a>
+                      <a href="alarmas.html">Sistema de Alarmas</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-center h-100">
+            <div id="main_container">
+              <input
+                type="search"
+                id="search_input"
+                autofocus="autofocus"
+                placeholder="Buscar servicios..."
+                onkeyup="SearchNow()"
+              />
+              <div id="suggestions_container">
+                <ul id="ultag"></ul>
+              </div>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
-          </li>
-        </ul>
-        <div class="d-flex justify-content-center h-100">
-          <div class="search">
-              <input type="text" class="search-input" placeholder="Buscar..." name="">
-              <a href="#" class="search-icon">
-                  <i class="fa fa-search"></i>
-              </a>
+            <script src="SearchBar.js" type="text/javascript" charset="utf-8"></script>
+            </div>
           </div>
-      </div>
-    </div>
-  </nav>
-</header>
+        </nav>
+      </header>
 <!--CAROUSEL-->  <!-- MEDIDAS DE LA FOTO: 1309 X 928-->
 <main>
 
@@ -128,6 +134,7 @@
         document.getElementById("myForm").style.display = "none";
       }
     </script>
+    <script src="script.js"></script>
   </div>
 </main> 
 </body>

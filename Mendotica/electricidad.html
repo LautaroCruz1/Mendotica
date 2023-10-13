@@ -3,12 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- PALABRAS CLAVES USANDO EL META / A MODIFICAR 
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    -->
     <title>SERVICIOS CCTV</title>
     <!--LINKS DE BOOTSTRAP Y FONTAWESOME-->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -20,49 +14,55 @@
     <!-- Custom CSS -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body> 
-<!--BODY-->
-<header> <!--NAV-->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow ">
-    <div class="container-fluid">
-      <a class="navbar-brand brandfont" href="#"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="nav-link active brandfont" href="index.html" style="color: black;">Servicios <span class="badge border" style="color: black;">5</span></a>
-              <div class="dropdown-content">
-                <a href="incendios.html">Sistema contra incendios</a>
-                <a href="electricidad.html">Sistema de electricidad</a>
-                <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
-                <a href="acceso.html">Sistema de control de acceso</a>
-                <a href="alarmas.html">Sistema de Alarmas</a>
+  <body onclick="hide_sugg()">
+    <header> <!--NAV-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
+          <div class="container-fluid">
+            <a class="navbar-brand brandfont" href="#"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="nav-link active brandfont" href="#" style="color: black;">Servicios</a>
+                    <div class="dropdown-content">
+                      <a href="incendios.html">Sistema contra incendios</a>
+                      <a href="electricidad.html">Sistema de electricidad</a>
+                      <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
+                      <a href="acceso.html">Sistema de control de acceso</a>
+                      <a href="alarmas.html">Sistema de Alarmas</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-center h-100">
+            <div id="main_container">
+              <input
+                type="search"
+                id="search_input"
+                autofocus="autofocus"
+                placeholder="Buscar servicios..."
+                onkeyup="SearchNow()"
+              />
+              <div id="suggestions_container">
+                <ul id="ultag"></ul>
+              </div>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
-          </li>
-        </ul>
-        <div class="d-flex justify-content-center h-100">
-          <div class="search">
-              <input type="text" class="search-input" placeholder="Buscar..." name="">
-              <a href="#" class="search-icon">
-                  <i class="fa fa-search"></i>
-              </a>
+            <script src="SearchBar.js" type="text/javascript" charset="utf-8"></script>
+            </div>
           </div>
-      </div>
-    </div>
-  </nav>
-</header>
+        </nav>
+      </header>
 <!--CAROUSEL-->  <!-- MEDIDAS DE LA FOTO: 1309 X 928-->
 <main>
     <!--BOTON DE WHATSAPP-->
@@ -149,15 +149,14 @@
 
 
   <!-- FOOTER -->
-  <footer class="container">
+  <footer class="footer-container">
     <p class="float-end"><a href="#">Volver a Inicio</a></p>
-    <p style="color: black;">&copy; 1988–2023 Mendotica Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p style="color: white;">&copy; 1988–2023 Mendotica Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p>aca pondriamos la ubicacion en el mapa con google maps</p>
+    <p>aca pondriamos info de la ubicación</p>
+    <p>info de copyright podemos poner una lista con los botones de arriba tipo de relleno y los iconos de rrss</p>
   </footer>
 </main>
-
-
-    <script src="bootstrap.bundle.min.js"></script>
-    
-      
+<script src="script.js"></script> 
   </body>
 </html>

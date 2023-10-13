@@ -19,7 +19,7 @@
     <!-- Custom CSS -->
     <link href="carousel.css" rel="stylesheet">
 </head>
-<body>
+<body onclick="hide_sugg()">
     <header> <!--NAV-->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
           <div class="container-fluid">
@@ -51,19 +51,26 @@
                 </li>
               </ul>
               <div class="d-flex justify-content-center h-100">
-                <div class="search">
-                    <input type="text" class="search-input" placeholder="Buscar..." name="">
-                    <a href="#" class="search-icon">
-                        <i class="fa fa-search"></i>
-                    </a>
-                </div>
+            <div id="main_container">
+              <input
+                type="search"
+                id="search_input"
+                autofocus="autofocus"
+                placeholder="Buscar servicios..."
+                onkeyup="SearchNow()"
+              />
+              <div id="suggestions_container">
+                <ul id="ultag"></ul>
+              </div>
             </div>
+            <script src="SearchBar.js" type="text/javascript" charset="utf-8"></script>
             </div>
           </div>
         </nav>
       </header>
       <main>
         <div class="divClientes">
+          <img src="Logos/logo-mendotica-horizontal.png" alt="logoMendotica" id="logoNosotros">
             <h1>Nuestra cartera de clientes</h1>
             <hr class="featurete-divider">
             <p>
@@ -85,7 +92,30 @@
                 Nos es muy gratificante presentarles el detalle de los trabajos que hemos realizado.
                 Sin otro particular, y a la espera de su consulta, los saludamos muy cordialmente. 
             </p>
+            <div id="listaClientes">
+            <ul>
+              <li>Bodega Peñaflor</li>
+              <li>Empresa Green S.A</li>
+              <li>Complejo Palmares de presidente (unidades habitacionales privadas)</li>
+              <li>Loteo San Telmo</li>
+              <li>Archivo general de la provincia</li>
+              <li>Conjunto Urbano Los Cerros para Dalvian S.A </li>
+              <li>Denver concesionaria oficial Fiat</li>
+              <li>Hidroeléctrica Los Nihuiles</li>
+              <li>Bank Argentina S.A para Sr. Daniel Trajter – Pcia de Bs As </li>
+              <li>Basa-Banco de archivos para Sr. Gabriel Zakalik</li>
+            </ul>
+          </div>
         </div>
-      </main>
+      
+      <footer class="footer-container">
+        <p class="float-end"><a href="#">Volver a Inicio</a></p>
+        <p style="color: white;">&copy; 1988–2023 Mendotica Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>aca pondriamos la ubicacion en el mapa con google maps</p>
+        <p>aca pondriamos info de la ubicación</p>
+        <p>info de copyright podemos poner una lista con los botones de arriba tipo de relleno y los iconos de rrss</p>
+      </footer>
+    </main>
+      <script src="script.js"></script>
 </body>
 </html>
