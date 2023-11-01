@@ -4,10 +4,10 @@
 
 body {
   padding-top: 3rem;
-  padding-bottom: 3rem;
   color: black;
   font-family: 'Raleway', sans-serif;
   background-color: rgb(255, 255, 255);
+  margin: 0px;
 }
 
 /* fuente */
@@ -20,52 +20,61 @@ a {
 /* SIZES */
 
 .navsize {
-  height: 95px;
+  height: 100px;
 }
 
 /* Barra de busqueda */
-.search{
-  height: 40px;
-  background-color: #fff;
-  padding: 10px;
-}
-
-.search-input{
-  color: white;
-  border:0;
-  outline: 0;
-  background: none;
-  width: 0;
-  margin-top:-25px;
-  caret-color:transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-
-}
-
-.search .search-input{
-  width: 350px;
-  caret-color: #536bf6;
-  font-size: 18px;
-  font-weight: 300;
-  color: black;
-  transition: width 0.4s linear;
-}
-
-.search-icon{
-  height: 30px;
-  width: 30px;
-  float: right;
+#main_container {
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  color: white;
-  background-color: #87877e;
-  margin-top:-5px;
-
+  flex-direction: column;
 }
-a:link{
+
+#search_input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 450px;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  transition: .2s ease-out;
+  position: sticky;
+  top: 5px;
+  z-index: 123;
+}
+
+#search_input:hover {
+  border: 2px solid dodgerblue;
+}
+
+#suggestions_container {
+  width: 450px;
+  height: 30%;
+  border-radius: 10px;
+  border-bottom: 2px solid gray;
+  position: fixed;
+  top: -100%;
+  background: white;
+  overflow: scroll;
+  transition: .3s ease-out;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#suggestions_container>ul>li>a {
+  font-size: 18px;
   text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+
 }
 
 
@@ -87,14 +96,8 @@ a:link{
 }
 
 .shadowG {
-  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); 
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
 
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
 }
 
 .b-example-divider {
@@ -155,7 +158,7 @@ a:link{
   position: absolute;
   background-color: #f1f1f1;
   min-width: 240px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -169,13 +172,19 @@ a:link{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #F3D944;}
+.dropdown-content a:hover {
+  background-color: #F3D944;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: inline-block;}
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 
 
 /*CARRSUELL*/
@@ -183,6 +192,7 @@ a:link{
 .carousel {
   margin-bottom: 8rem;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 5rem;
@@ -210,10 +220,10 @@ a:link{
 }
 
 .imgRedonda {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 46%;
+  object-fit: contain;
   filter: saturate(1.2);
   box-shadow: 1px 1px 3px #000000
 }
@@ -264,19 +274,19 @@ a:link{
 }
 
 @keyframes animacion {
-	0% {
-		opacity: 0;
-		transform: translateY(50px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
-.chat-header{
+.chat-header {
   padding: 15px;
   background-color: #4FCE5D;
   color: #fff;
@@ -292,13 +302,13 @@ a:link{
   border-radius: 100%;
 }
 
-.chat-header h2{
+.chat-header h2 {
   text-shadow: 1px 1px 10px #555;
 }
 
 /* CONVERSACION DEL POP UP */
 
-.msg-wp{
+.msg-wp {
   margin: 0;
   color: #000000;
   width: 100%;
@@ -310,7 +320,7 @@ a:link{
   min-height: 200px;
 }
 
-.msg-wp img{
+.msg-wp img {
   height: 55px;
   position: relative;
   border-radius: 50%;
@@ -350,7 +360,7 @@ a:link{
 
 /* BOTONES DEL POP UP*/
 
-.form-container a{
+.form-container a {
   background: linear-gradient(90deg, #fff, transparent) #d5ecd7;
   transition: background-color 1s;
   color: #000000;
@@ -364,12 +374,13 @@ a:link{
   text-decoration: none;
 }
 
-.form-container a:hover{
+.form-container a:hover {
   background-color: #1bb955;
-  color: #000000;;
+  color: #000000;
+  ;
 }
 
-.form-container .botonCerrar{
+.form-container .botonCerrar {
   background: linear-gradient(90deg, #fff, transparent) #d5ecd7;
   transition: background-color 1s;
   color: #000000;
@@ -378,13 +389,14 @@ a:link{
   border-radius: 20px;
 }
 
-.form-container .botonCerrar:hover{
+.form-container .botonCerrar:hover {
   background-color: #1bb955;
-  color: #000000;;
+  color: #000000;
+  ;
 }
 
 
-.form-container .btn a{
+.form-container .btn a {
   background-color: #fff;
   color: #000000;
   padding: 12px 16px;
@@ -395,7 +407,7 @@ a:link{
 }
 
 
-button img{
+button img {
   height: 35px;
   border-radius: 100%;
 }
@@ -408,12 +420,13 @@ button img{
   height: 100vh;
 }
 
-form {
+.form {
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .titulo {
   position: absolute;
   top: 20%;
@@ -421,33 +434,129 @@ form {
   transform: translate(-50%, -50%);
 }
 
+/*Pestaña Nosotros.html*/
 
+.divClientes {
+  padding: 8% 12%;
+  width: 100%;
+  height: 100%;
+  background: rgb(243, 217, 68);
+  background: linear-gradient(328deg, rgba(243, 217, 68, 0.6264880952380952) 0%, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 1) 65%, rgba(243, 217, 68, 0.7189250700280112) 100%);
+  text-align: center;
+  font-size: 21px;
+}
 
+#listaClientes {
+  text-align: start;
+  display: inline-block;
+}
 
+#logoNosotros {
+  padding: 20px;
+  margin-top: 0;
+  margin-right: 25px;
+}
 
+/*FOOTER*/
+.footer-container {
+  background-color: #403e3e;
+  width: 100vw;
+}
 
+.mapa {
+  width: 1350px;
+  height: 300px;
+  border: none;
+}
 
+.nuestrosClientes {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+}
 
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
+@media (min-width: 360px) and (max-width:768px) {
+  body {
+    font-size: 14px;
+    /* Reducir el tamaño de fuente para pantallas pequeñas */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
   }
 
-  .featurette-heading {
-    font-size: 50px;
+  .navsize {
+    height: 110px;
+    width: 100vw;
+  }
+
+  /* Barra de busqueda */
+  #main_container {
+    display: none;
+  }
+
+  /* menu dropdown de los servicios en el nav */
+  .dropdown {
+    display: none;
+  }
+
+  /* Carrusell*/
+
+  .carousel {
+    margin-bottom: 8rem;
+  }
+
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+
+  .carousel-item {
+    /*ORIGINAL 32/31 REM*/
+    height: 40rem;
+  }
+
+  #TextoCarusel {
+    font-size: 15px;
+  }
+
+  /* MARKETING CONTENT */
+
+  .marketing .col-lg-4 {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .imgRedonda {
+    height: 120px;
+    width: 120px;
+    border-radius: 46%;
+    object-fit: contain;
+    filter: saturate(1.2);
+    box-shadow: 1px 1px 3px #000000
+  }
+
+  .marketing .col-lg-6 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* nuestros clientes */
+
+  .nuestrosClientes {
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+  }
+
+  /*FOOTER*/
+  .mapa {
+    width: 300px;
+    height: 300px;
   }
 }
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
-}
-
