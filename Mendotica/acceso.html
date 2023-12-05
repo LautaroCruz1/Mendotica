@@ -20,49 +20,55 @@
     <!-- Custom CSS -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body> 
-<!--BODY-->
-<header> <!--NAV-->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow ">
-    <div class="container-fluid">
-      <a class="navbar-brand brandfont" href="index.html"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="nav-link active brandfont" href="#" style="color: black;">Servicios</a>
-              <div class="dropdown-content">
-                <a href="incendios.html">Sistema contra incendios</a>
-                <a href="electricidad.html">Sistema de electricidad</a>
-                <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
-                <a href="acceso.html">Sistema de control de acceso</a>
-                <a href="alarmas.html">Sistema de Alarmas</a>
+  <body onclick="hide_sugg()">
+    <header> <!--NAV-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
+          <div class="container-fluid">
+            <a class="navbar-brand brandfont" href="#"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="nav-link active brandfont" href="#" style="color: black;">Servicios</a>
+                    <div class="dropdown-content">
+                      <a href="incendios.html">Sistema contra incendios</a>
+                      <a href="electricidad.html">Sistema de electricidad</a>
+                      <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
+                      <a href="acceso.html">Sistema de control de acceso</a>
+                      <a href="alarmas.html">Sistema de Alarmas</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-center h-100">
+            <div id="main_container">
+              <input
+                type="search"
+                id="search_input"
+                autofocus="autofocus"
+                placeholder="Buscar servicios..."
+                onkeyup="SearchNow()"
+              />
+              <div id="suggestions_container">
+                <ul id="ultag"></ul>
+              </div>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
-          </li>
-        </ul>
-        <div class="d-flex justify-content-center h-100">
-          <div class="search">
-              <input type="text" class="search-input" placeholder="Buscar..." name="">
-              <a href="#" class="search-icon">
-                  <i class="fa fa-search"></i>
-              </a>
+            <script src="SearchBar.js" type="text/javascript" charset="utf-8"></script>
+            </div>
           </div>
-      </div>
-    </div>
-  </nav>
-</header>
+        </nav>
+      </header>
 <!--CAROUSEL-->  <!-- MEDIDAS DE LA FOTO: 1309 X 928-->
 <main>
     <!--BOTON DE WHATSAPP-->
@@ -146,15 +152,76 @@
 
 
   <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Volver a Inicio</a></p>
-    <p style="color: black;">&copy; 1988–2023 Mendotica Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <footer class="footer-container">
+    <!-- Footer -->
+  <!-- Grid container -->
+  <div class="container p-4 text-center">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998; padding: 5px 14px;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+      <!-- Github -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled mb-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26789.41269959977!2d-68.81692000000001!3d-32.933142000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0b97009d9fef%3A0xa10edc18d1fba694!2sMendotica!5e0!3m2!1ses!2sar!4v1698158469613!5m2!1ses!2sar" 
+            width="1350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+
+  </div>
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2023 Copyright:
+    <a href="https://mdbootstrap.com/">mendotica.com</a>
+  </div>
+  <!-- Copyright -->
+<!-- Footer -->
   </footer>
 </main>
-
-
+    <script src="script.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
-    
-      
+    <script src="bootstrap.bundle.min.js.map"></script>
   </body>
 </html>
