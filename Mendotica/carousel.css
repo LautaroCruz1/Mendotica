@@ -91,12 +91,6 @@ a:link{
 
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);
@@ -460,24 +454,73 @@ button img{
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
+
+@media screen and (min-width: 250px ) AND (max-width: 900px) {
+
+
+  #TextoCarusel{
+    font-size: 30px;
+    margin-top: 50px;
+    padding-top: 4px;
   }
 
-  .featurette-heading {
-    font-size: 50px;
+  #quien{
+    margin-bottom: -20px !important;
   }
+
+  .h1{
+    display: flexbox;
+    text-align: center !important;
+    font-size: 40px !important;
+    margin-bottom: 50px !important;
+  }
+
+  
+  #logo1{
+    width: 260px;
+  }
+
+  .navbar>.container-fluid {
+    font-size: 15px;
+    display: inline-block;
+    background-color:  #f3d944;
+    margin: 0px;
+    width: auto;
+    height: auto;
+  }
+
+  #myCarousel{
+    display:flex;
+    object-fit:fill;
+    height: auto;
+  }
+
+  .search {
+
+    padding-left: 10px;
+    margin-left: 0px;
+    margin-bottom: 40px;
+    margin-right: 80px;
+    flex-wrap: nowrap;
+    width: 300px;
+  }
+
+  .search-icon{
+    margin-top: -35px;
+    }
+  
+  img {
+    object-fit:cover!important;
+  }
+
+  .container{
+    font-size: 5px;
+  }
+
+  .carousel-control-next{
+    margin-right: 26px;
+    color: #fff;
+  
+  }
+
 }
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
-}
-
-
-
