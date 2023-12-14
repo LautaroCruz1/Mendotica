@@ -40,7 +40,6 @@ const pageLinks = {
   'Control de acceso': 'acceso.html',
   'Camaras': 'cctv.html',
   'Contacto': 'contacto.html',
-  'Clientes': 'clientes.html',
   'Sobre Nosotros': 'Nosotros.html'
 };
 
