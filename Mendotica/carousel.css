@@ -12,6 +12,11 @@ body {
 
 /* fuente */
 
+#nav {
+  width: 100vw;
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -60,10 +65,6 @@ a {
   background: white;
   overflow: scroll;
   transition: .3s ease-out;
-}
-
-ul {
-  list-style-type: none;
 }
 
 #suggestions_container>ul>li>a {
@@ -247,7 +248,7 @@ ul {
   opacity: 0.8;
   position: fixed;
   bottom: 23px;
-  right: 8px;
+  right: 5px;
   width: 60px;
 }
 
@@ -381,7 +382,7 @@ ul {
 }
 
 .form-container .botonCerrar {
-  background: linear-gradient(90deg, #fff, transparent) #d5ecd7;
+  background: linear-gradient(90deg, #fff, transparent) #e4efe5;
   transition: background-color 1s;
   color: #000000;
   height: 50px;
@@ -435,35 +436,6 @@ button img {
   transform: translate(-50%, -50%);
 }
 
-/* SISTEMA DE INCENDIOS
--------------------------------------------------- */
-
-.parrafo{
-  margin-top: -20;
-  margin-bottom: 1rem;
-}
-
-
-.carousel-control-prev{
-  background-color: transparent; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Quitar el borde */
-  padding: 50px 20px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  position: absolute;
-  top: -30%;
-  
-}
-
-.carousel-control-next{
-  background-color: transparent; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Quitar el borde */
-  padding: 50px 20px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  position: absolute;
-  top: -30%;
-
 /*Pestaña Nosotros.html*/
 
 .divClientes {
@@ -505,75 +477,300 @@ button img {
   height: 500px;
 }
 
+#pdfLink {
+  color: #000000;
+  background-color: #F3D944;
+  padding: 25px 50px;
+  border: 2px solid #000000;
+  margin-left: 830px;
+  margin-bottom: 400px;
+}
+
+#pdfFrame {
+  height: 35px;
+  width: 35px;
+}
+
+#pdfLink:hover {
+  background-color: #e7c921;
+  cursor: pointer;
+}
+
+
+/* SISTEMA DE INCENDIOS
+-------------------------------------------------- */
+
+.parrafo {
+  margin-top: -20;
+  margin-bottom: 1rem;
+}
+
+
+.carousel-control-prev {
+  background-color: transparent;
+  /* Color de fondo */
+  color: #fff;
+  /* Color del texto */
+  border: none;
+  /* Quitar el borde */
+  padding: 50px 20px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  position: absolute;
+  top: -30%;
+
+}
+
+.carousel-control-next {
+  background-color: transparent;
+  /* Color de fondo */
+  color: #fff;
+  /* Color del texto */
+  border: none;
+  /* Quitar el borde */
+  padding: 50px 20px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  position: absolute;
+  top: -30%;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media screen and (min-width: 250px ) AND (max-width: 900px) {
+@media screen and (min-width: 250px) AND (max-width: 900px) {
 
 
-  #TextoCarusel{
-    font-size: 30px;
-    margin-top: 50px;
-    padding-top: 4px;
+  #TextoCarusel {
+      font-size: 30px;
+      margin-top: 50px;
+      padding-top: 4px;
   }
 
-  #quien{
-    margin-bottom: -20px !important;
+  #quien {
+      margin-bottom: -20px !important;
   }
 
-  .h1{
-    display: flexbox;
-    text-align: center !important;
-    font-size: 40px !important;
-    margin-bottom: 50px !important;
+  .h1 {
+      display: flexbox;
+      text-align: center !important;
+      font-size: 40px !important;
+      margin-bottom: 50px !important;
   }
 
-  
-  #logo1{
-    width: 260px;
+
+  #logo1 {
+      width: 260px;
   }
 
   .navbar>.container-fluid {
-    font-size: 15px;
-    display: inline-block;
-    background-color:  #f3d944;
-    margin: 0px;
-    width: auto;
-    height: auto;
+      font-size: 15px;
+      display: inline-block;
+      background-color: #f3d944;
+      margin: 0px;
+      width: auto;
+      height: auto;
   }
 
-  #myCarousel{
-    display:flex;
-    object-fit:fill;
-    height: auto;
+  #myCarousel {
+      display: flex;
+      object-fit: fill;
+      height: auto;
   }
 
   .search {
-
-    padding-left: 10px;
-    margin-left: 0px;
-    margin-bottom: 40px;
-    margin-right: 80px;
-    flex-wrap: nowrap;
-    width: 300px;
+      padding-left: 10px;
+      margin-left: 0px;
+      margin-bottom: 40px;
+      margin-right: 80px;
+      flex-wrap: nowrap;
+      width: 300px;
   }
 
-  .search-icon{
-    margin-top: -35px;
-    }
-  
+  .search-icon {
+      margin-top: -35px;
+  }
+
   img {
-    object-fit:cover!important;
+      object-fit: cover !important;
   }
 
-  .container{
-    font-size: 5px;
+  .container {
+      font-size: 5px;
   }
 
-  .carousel-control-next{
-    margin-right: 26px;
-    color: #fff;
+  .carousel-control-next {
+      margin-right: 26px;
+      color: #fff;
+
+  }
+
+  body {
+    font-size: 14px;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .navsize {
+    height: 110px;
+    width: 100vw;
+  }
+
+
+#navbarCollapse {
+  display: none;
+}
+
   
+  /* Barra de busqueda */
+  #main_container {
+    display: none;
   }
+
+  /* menu dropdown de los servicios en el nav */
+  .dropdown {
+    display: none;
+  }
+
+  /* Carrusell*/
+
+  .carousel {
+    margin-bottom: 8rem;
+  }
+
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+
+  .carousel-item {
+    /*ORIGINAL 32/31 REM*/
+    height: 40rem;
+  }
+
+  #TextoCarusel {
+    font-size: 15px;
+  }
+
+  /* MARKETING CONTENT */
+
+  .marketing .col-lg-4 {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .imgRedonda {
+    height: 120px;
+    width: 120px;
+    border-radius: 46%;
+    object-fit: contain;
+    filter: saturate(1.2);
+    box-shadow: 1px 1px 3px #000000
+  }
+
+  .marketing .col-lg-6 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* nuestros clientes */
+
+  .nuestrosClientes {
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+  }
+
+  /*FOOTER*/
+  .mapa {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/*RESPONSIVE: LAPTOP (1024px)*/
+
+@media screen and (min-width:899px) AND (max-width:1025px) {
+  
+  body{
+    overflow: scroll;
+  }
+
+  .carousel-item {
+    height: 37rem;
+  }
+  
+
+  #TextoCarusel {
+    margin-top: 50px;
+    font-size: 25px;
+  }
+  
+  #nav a {
+    font-size: 21px;
+  }
+
+  #search_input {
+    width: 250px;
+  }
+
+  #suggestions_container {
+    width: 250px;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  .nuestrosClientes{
+    width: 350px;
+    height: 350px;
+  }
+
+  .mapa {
+    width: 900px;
+    height: 300px;
+  }
+
+  /*Pestaña incendios*/
+
+  .carousel-inner {
+    height: 540px;
+  }
+  
+  .open-button{
+    bottom: 4px;
+  }
+
+}
+
+/*RESPONSIVE: TABLET (768px)*/
+
+@media screen and (min-width:768px) AND (max-width:898px) {
+
+  .nav-item a {
+    font-size: 20px;
+  }  
+
+  #TextoCarusel{
+    font-size: 20px;
+  }
+
+  .nuestrosClientes{
+    height: 290px;
+    width: 290px;
+  }
+
+  .mapa {
+    width: 680px;
+    height: 300px;
+  }
+
+
 }

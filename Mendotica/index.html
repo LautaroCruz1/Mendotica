@@ -1,59 +1,41 @@
 <!doctype html>
 <html lang="es">
 
-    <!-- PALABRAS CLAVES USANDO EL META / A MODIFICAR 
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    -->
-    <title>Mendotica|Soluciones tecnologicas</title>
-    <!--LINKS DE BOOTSTRAP Y FONTAWESOME-->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/643b5e8970.js" crossorigin="anonymous"></script>
-    <!--GOOGLE FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="carousel.css" rel="stylesheet">
-  </head>
-  <body> 
-<!--BODY-->
-<header> <!--NAV-->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
-    <div class="container-fluid">
-      <a class="navbar-brand brandfont" href="#"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png" id="logo1"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active brandfont" aria-current="page" href="index.html" style="color: black;">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="nav-link active brandfont" id="servicios" href="#" style="color: black;">Servicios</a>
-              <div class="dropdown-content">
-                <a href="incendios.html">Sistema contra incendios</a>
-                <a href="electricidad.html">Sistema de electricidad</a>
-                <a href="cctv.html">Circuito cerrado de televisón CCTV</a>
-                <a href="acceso.html">Sistema de control de acceso</a>
-                <a href="alarmas.html">Sistema de Alarmas</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="contacto.html" style="color: black;" >Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active brandfont" href="nosotros.html" style="color: black;" >Nosotros</a>
-          </li>
-        </ul>
-        <div class="d-flex justify-content-center h-100">
-          <div class="search">
-              <input type="text" id="search" class="search-input" placeholder="Buscar..." name="">
-              <a href="#" class="search-icon">
-                  <i id="search1" class="fa fa-search"></i>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Mendotica|Soluciones tecnologicas</title>
+  <!--LINKS DE BOOTSTRAP Y FONTAWESOME-->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/643b5e8970.js" crossorigin="anonymous"></script>
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body onclick="hide_sugg()">
+  <header> <!--NAV-->
+    <nav class="navbar navbar-expand-md navbar-expand-sm navbar-dark fixed-top brandcolor navsize boxshadow">
+      <div class="container-fluid" id="nav">
+        <a class="navbar-brand brandfont" href="#"><img src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="openMenu()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active brandfont" aria-current="page" href="index.html"
+                style="color: black;">Inicio</a>
+            </li>
+            <li class="nav-item dropdown"> <!-- Agregamos la clase dropdown al elemento li -->
+              <a class="nav-link active brandfont dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
                 Servicios
               </a>
               <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
@@ -74,7 +56,7 @@
           <div class="d-flex justify-content-center h-100">
             <div id="main_container">
               <input type="search" id="search_input" autofocus="autofocus" placeholder="Buscar servicios..."
-                onkeyup="SearchNow()" />
+                onkeyup="SearchNow()"/>
               <div id="suggestions_container">
                 <ul id="ultag"></ul>
               </div>
@@ -92,36 +74,28 @@
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      </div>
-    </div>
-  </nav>
-</header>
-<!--CAROUSEL-->  <!-- MEDIDAS DE LA FOTO: 1309 X 928-->
-<main class="container-fluid">
-  <div id="myCarousel" class="carousel slide container-fluid" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../Mendotica/imagenesCarusel/MENDOTICA-CAROUSEL.jpeg" alt="gordos-trabajando" height="100%" width="100%" style="object-fit: cover; filter: saturate(1.6); filter: blur(3px);">   
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1 class="h1" id="quien">¿Quienes somos?.</h1>
-            <p id="TextoCarusel"> En Mendotica sómos especialistas en múltiples servicios de seguridad para empresas. </p></span>  
-            <p><a class="btn btn-lg btn-white brandcolor" href="#">Ver Más</a></p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../Mendotica/imagenesCarusel/MENDOTICA-CAROUSEL.jpeg" alt="sedeMendotica" height="100%" width="100%"
+            style="object-fit: cover; filter: saturate(1.6); filter: blur(3px);">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>¿Quienes somos?.</h1>
+              <p id="TextoCarusel"> En Mendotica sómos especialistas en múltiples servicios de seguridad para empresas.
+              </p></span>
+              <p><a class="btn btn-lg btn-white brandcolor" href="Nosotros.html">Sobre nosotros</a></p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="carousel-item ">
-        <img src="../Mendotica/imagenesCarusel/esta es.jpeg" alt="gordos-trabajando" height="100%" width="100%" style="object-fit: cover; filter: saturate(1.6); filter: blur(2px);">   
-        <div class="container">
-          <div class="carousel-caption">
-            <h2 class="h1">Expertos en seguridad</h2>
-            <p id="TextoCarusel">Ofrecemos servicios de excelente calidad para tu empresa.</p>
-            <p><a class="btn btn-lg btn-white brandcolor" href="#">Ver Servicios</a></p>
+        <div class="carousel-item">
+          <img src="../Mendotica/imagenesCarusel/esta es.jpeg" alt="oficinasMendotica" height="100%" width="100%"
+            style="object-fit: cover; filter: saturate(1.6); filter: blur(2px);">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="h1">Expertos en seguridad</h2>
+              <p id="TextoCarusel">Ofrecemos servicios de excelente calidad para tu empresa.</p>
+              <p><a class="btn btn-lg btn-white brandcolor" href="incendios.html">Ver Servicios</a></p>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
@@ -129,7 +103,6 @@
             style="object-fit: cover; filter: saturate(1.8); filter: blur(2px);">
           <div class="carousel-caption text-end">
             <h2 class="h1">Protección sin límites, seguridad garantizada</h2>
-            <p>En este ultimo podemos hablar de como trabajamos, nuestra politica o métodos.</p>
             <p><a class="btn btn-lg btn-white brandcolor" href="contacto.html">Contactanos</a></p>
           </div>
         </div>
@@ -162,58 +135,8 @@
         <button type="button" class="btn btn-dark botonCerrar" onclick="closeform()">X</button>
       </form>
     </div>
-    <script type="text/javascript">
-      function openform() {
-        document.getElementById("myForm").style.display = "block";
-      }
-      function closeform() {
-        document.getElementById("myForm").style.display = "none";
-      }
-    </script>
     </div>
-    <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing container-fluid" >
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="../Mendotica/imagenesServicios/camara.jpeg" alt="camarita" class="imgRedonda">
-        <h2 class="fw-normal textshadowMin dark-text">CCTV</h2>
-        <p class="dark-text">Equipamientos integrados para brindar seguridad mediante camaras de video.</p>
-        <p><a class="btn btn-light brandcolor border" href="#">Ver Detalles &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="../Mendotica/imagenesServicios/canieria.jpeg" alt="canieria" class="imgRedonda">
-        <h2 class="fw-normal textshadowMin dark-text">Sistema Contra incendios</h2>
-        <p class="dark-text">Equipamientos diseñados para la proteccion de vidas e inmuebles.</p>
-        <p><a class="btn btn-light brandcolor border" href="incendios.html">Ver Detalles &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="../Mendotica/imagenesServicios/sistema-electrico.jpeg" alt="andamio" class="imgRedonda">
-        <h2 class="fw-normal textshadowMin dark-text">Instalación Electrica</h2>
-        <p class="dark-text">Diseñamos redes electricas que permitan llevar energia a distintos puntos tanto urbanos como rurales.</p>
-        <p><a class="btn btn-light brandcolor border" href="#">Ver Detalles &raquo;</a></p>
-      </div>
-      <div class="col-lg-6">
-        <img src="../Mendotica/imagenesServicios/sistema-electrico.jpeg" alt="andamio" class="imgRedonda">
-        <h2 class="fw-normal textshadowMin dark-text">Instalación Electrica</h2>
-        <p class="dark-text">Diseñamos redes electricas que permitan llevar energia a distintos puntos tanto urbanos como rurales.</p>
-        <p><a class="btn btn-light brandcolor border" href="#">Ver Detalles &raquo;</a></p>
-      </div>
-      <div class="col-lg-6">
-        <img src="../Mendotica/imagenesServicios/sistema-electrico.jpeg" alt="andamio" class="imgRedonda">
-        <h2 class="fw-normal textshadowMin dark-text">Instalación Electrica</h2>
-        <p class="dark-text">Diseñamos redes electricas que permitan llevar energia a distintos puntos tanto urbanos como rurales.</p>
-        <p><a class="btn btn-light brandcolor border" href="#">Ver Detalles &raquo;</a></p>
-      </div>
-        <!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
     <div class="container marketing">
-
       <!-- Clientes con sus logos -->
       <hr class="featurette-divider">
       <br>
@@ -299,27 +222,14 @@
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998; padding: 5px 14px;" href="#!"
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998; padding: 5px 14px;" href="https://www.facebook.com/profile.php?id=100076163367246&mibextid=ZbWKwL"
           role="button"><i class="fab fa-facebook-f"></i></a>
-
-        <!-- Twitter -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i
-            class="fab fa-twitter"></i></a>
-
-        <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i
-            class="fab fa-google"></i></a>
-
         <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://instagram.com/mendotica?igshid=MzMyNGUyNmU2YQ==" role="button"><i
             class="fab fa-instagram"></i></a>
-
         <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="https://www.linkedin.com/company/mendotica-argentina/" role="button"><i
             class="fab fa-linkedin-in"></i></a>
-        <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i
-            class="fab fa-github"></i></a>
       </section>
       <!-- Section: Social media -->
       <!-- Section: Links -->
@@ -349,8 +259,8 @@
     <!-- Footer -->
   </footer>
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="bootstrap.bundle.min.js"></script>
   <script src="bootstrap.bundle.min.js.map"></script>
 </body>
-
 </html>
