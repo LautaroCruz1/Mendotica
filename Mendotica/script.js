@@ -27,7 +27,6 @@ const suggestions = [
   'Control de acceso',
   'Camaras',
   'Contacto',
-  'Clientes',
   'Sobre Nosotros'
 ];
 
@@ -68,3 +67,11 @@ function closeform() {
 
 
 
+//loader 
+document.addEventListener("DOMContentLoaded", function() {
+  // Simula el tiempo de carga
+  setTimeout(function() {
+    document.getElementById("loader-container").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }, 2000); // duracion del loader en ms
+});
