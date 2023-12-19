@@ -79,6 +79,14 @@ a {
 
 }
 
+/*dropdown de servicios (nav)*/
+
+.dropdown-menu {
+  position: relative;
+  margin-left: 90px;
+  margin-top: 20px;
+}
+
 
 /* COLORES Y FUENTE DE MARCA */
 .brandcolor {
@@ -814,8 +822,25 @@ button img {
 
 @media screen and (min-width:768px) AND (max-width:898px) {
 
+/* dropdown de servicios (nav)*/
+
+#imagenMendotica{
+  margin-left: 200px;
+}
+
+.navsize{
+  height: 140px;
+}
+
+.dropdown-menu {
+  position: relative;
+  margin-left: 90px;
+  margin-top: 20px;
+}
+
   .nav-item a {
     font-size: 20px;
+    margin-left: 60px;
   }  
 
   #TextoCarusel{
