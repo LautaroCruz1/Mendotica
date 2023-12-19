@@ -6,9 +6,16 @@ body {
   color: black;
   font-family: 'Raleway', sans-serif;
   background-color: rgb(255, 255, 255);
+<<<<<<< HEAD
   margin: 0px;
   overflow-y: scroll;
   overflow-x: hidden;
+=======
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+>>>>>>> 8bf4117 (tomy)
 }
 
 /* fuente */
@@ -682,6 +689,7 @@ button img {
     display: none;
   }
 
+<<<<<<< HEAD
   /* menu dropdown de los servicios en el nav */
   .dropdown {
     display: none;
@@ -907,3 +915,22 @@ button img {
   
 
 } 
+=======
+}
+
+
+.formulario{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dfded9;
+  font-weight: bold;
+  padding: 50px;
+  font-size: 15px;
+  
+}
+
+.formulario .titulo{
+  padding: 0px;
+  font-size: 30px;
+  text-shadow: 1px 10px 40px  #000000;
+}
+>>>>>>> 8bf4117 (tomy)
