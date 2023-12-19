@@ -26,184 +26,190 @@
 </head>
 
 <body onclick="hide_sugg()">
-  <header> <!--NAV-->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
-      <div class="container-fluid">
-        <a class="navbar-brand brandfont" href="index.html"><img
-            src="../Mendotica/Logos/logo-mendotica-horizontal.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active brandfont" aria-current="page" href="index.html"
-                style="color: black;">Inicio</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active brandfont dropdown-toggle" href="#" id="servicesDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                Servicios
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li><a class="dropdown-item" href="incendios.html">Sistema contra incendios</a></li>
-                <li><a class="dropdown-item" href="electricidad.html">Sistema de electricidad</a></li>
-                <li><a class="dropdown-item" href="cctv.html">Circuito cerrado de televisión CCTV</a></li>
-                <li><a class="dropdown-item" href="acceso.html">Sistema de control de acceso</a></li>
-                <li><a class="dropdown-item" href="alarmas.html">Sistema de Alarmas</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active brandfont" href="contacto.html" style="color: black;">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active brandfont" href="nosotros.html" style="color: black;">Nosotros</a>
-            </li>
-          </ul>
-          <div class="d-flex justify-content-center h-100">
-            <div id="main_container">
-              <input type="search" id="search_input" autofocus="autofocus" placeholder="Buscar servicios..."
-                onkeyup="SearchNow()" />
-              <div id="suggestions_container">
-                <ul id="ultag"></ul>
+  <div id="loader-container">
+    <div class="loader">
+    </div>
+  </div>
+  <span style="display: none;" id="content">
+    <header> <!--NAV-->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top brandcolor navsize boxshadow">
+        <div class="container-fluid">
+          <a class="navbar-brand brandfont" href="index.html"><img
+              src="../Mendotica/Logos/logo-mendotica-horizontal.png" id="imagenMendotica"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active brandfont" aria-current="page" href="index.html"
+                  style="color: black;">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active brandfont dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="incendios.html">Sistema contra incendios</a></li>
+                  <li><a class="dropdown-item" href="electricidad.html">Sistema de electricidad</a></li>
+                  <li><a class="dropdown-item" href="cctv.html">Circuito cerrado de televisión CCTV</a></li>
+                  <li><a class="dropdown-item" href="acceso.html">Sistema de control de acceso</a></li>
+                  <li><a class="dropdown-item" href="alarmas.html">Sistema de Alarmas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active brandfont" href="contacto.html" style="color: black;">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active brandfont" href="nosotros.html" style="color: black;">Nosotros</a>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center h-100">
+              <div id="main_container">
+                <input type="search" id="search_input" autofocus="autofocus" placeholder="Buscar servicios..."
+                  onkeyup="SearchNow()" />
+                <div id="suggestions_container">
+                  <ul id="ultag"></ul>
+                </div>
               </div>
             </div>
-            <script src="SearchBar.js" type="text/javascript" charset="utf-8"></script>
+      </nav>
+      <!-- BOTON DE WHATSAPP-->
+      <button class="open-button" onclick="openform()"><b><img src="../Mendotica/Logos/whatsapp-logo.png"
+            alt="wp"></b></button>
+      <div class="chat-popup chat-popup-out" id="myForm">
+        <form action="#" class="form-container">
+          <div class="chat-header">
+            &nbsp <img src="../Mendotica/Logos/whatsapp-logo.png" alt="">
+            <h2 class="h1"> &nbsp Whatsapp</h2>
           </div>
-        </div>
-    </nav>
-    <!-- BOTON DE WHATSAPP-->
-    <button class="open-button" onclick="openform()"><b><img src="../Mendotica/Logos/whatsapp-logo.png"
-          alt="wp"></b></button>
-    <div class="chat-popup chat-popup-out" id="myForm">
-      <form action="#" class="form-container">
-        <div class="chat-header">
-          &nbsp <img src="../Mendotica/Logos/whatsapp-logo.png" alt="">
-          <h2 class="h1"> &nbsp Whatsapp</h2>
-        </div>
-        <div class="msg-wp">
-          <img src="../Mendotica/Logos/Mendotica.WP.JPG" alt="wp-user">
-          <div class="box chat-texto">
-            ¡Hola! <br> ¿Cómo podemos ayudarte? <br> ¡Dejanos tu consulta!
+          <div class="msg-wp">
+            <img src="../Mendotica/Logos/Mendotica.WP.JPG" alt="wp-user">
+            <div class="box chat-texto">
+              ¡Hola! <br> ¿Cómo podemos ayudarte? <br> ¡Dejanos tu consulta!
+            </div>
           </div>
-        </div>
-        <a href="https://wa.me/5492612445323" target="_blank" class="btn btn-dark">Enviar Mensaje.</a></button>
-        <button type="button" class="btn btn-dark botonCerrar" onclick="closeform()">X</button>
-      </form>
-    </div>
-
-  </header>
-  <main class="container-fluid divClientes">
-    <div class="text-center">
-      <img src="Logos/logo-mendotica-horizontal.png" alt="logoMendotica" id="logoNosotros" class="img-fluid">
-      <h1>Nuestra cartera de clientes</h1>
-      <hr class="featurete-divider">
-      <p>
-        Tenemos el agrado de dirigirnos a ustedes con el fin de hacerles conocer nuestras
-        referencias comerciales en el mercado argentino:
-        Contamos con una vasta trayectoria en la que la experiencia es el principal pilar en
-        nuestra Empresa.
-      <p> Hace más de veinte años trabajamos con seriedad y responsabilidad para satisfacer
-        todos sus requerimientos y, nuestra labor se ha extendido más allá
-        de Mendoza, llegando al mercado de San Juan y Buenos Aires, por citar solo
-        algunos.</p>
-      <hr class="featurete-divider">
-      <p>Contamos con diferentes marcas de primer nivel, lo cual resulta muy beneficioso al
-        momento de hablar de seguridad, ya que dichos productos son de tecnología de
-        avanzada</p>
-      <p>En otras palabras, disponemos del equipo técnico, la experiencia, el conocimiento y la
-        trayectoria necesaria para cumplir con todo lo que su Empresa requiera, disponiendo de
-        lo mejor en tecnología.</p>
-      Nos es muy gratificante presentarles el detalle de los trabajos que hemos realizado.
-      Sin otro particular, y a la espera de su consulta, los saludamos muy cordialmente.
-      </p>
-      <div id="listaClientes">
-        <ul>
-          <li>Bodega Peñaflor</li>
-          <li>Empresa Green S.A</li>
-          <li>Complejo Palmares de presidente (unidades habitacionales privadas)</li>
-          <li>Loteo San Telmo</li>
-          <li>Archivo general de la provincia</li>
-          <li>Conjunto Urbano Los Cerros para Dalvian S.A </li>
-          <li>Denver concesionaria oficial Fiat</li>
-          <li>Hidroeléctrica Los Nihuiles</li>
-          <li>Bank Argentina S.A para Sr. Daniel Trajter – Pcia de Bs As </li>
-          <li>Basa-Banco de archivos para Sr. Gabriel Zakalik</li>
-          <div id="pdf">
-            <a href="comerciales.pdf" download="comerciales.pdf">Descargar cartera de clientes</a>
-          </div>
-        </ul>
+          <a href="https://wa.me/5492612445323" target="_blank" class="btn btn-dark">Enviar Mensaje.</a></button>
+          <button type="button" class="btn btn-dark botonCerrar" onclick="closeform()">X</button>
+        </form>
       </div>
-  </main>
-  <!-- FOOTER -->
-  <footer class="footer-container">
-    <!-- Footer -->
-    <!-- Grid container -->
-    <div class="container p-4 text-center">
 
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998; padding: 5px 14px;"
-          href="https://www.facebook.com/profile.php?id=100076163367246&mibextid=ZbWKwL" role="button"><i
-            class="fab fa-facebook-f"></i></a>
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
-          href="https://instagram.com/mendotica?igshid=MzMyNGUyNmU2YQ==" role="button"><i
-            class="fab fa-instagram"></i></a>
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca"
-          href="https://www.linkedin.com/company/mendotica-argentina/" role="button"><i
-            class="fab fa-linkedin-in"></i></a>
-      </section>
-      <!-- Section: Social media -->
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <ul class="list-unstyled mb-0">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26789.41269959977!2d-68.81692000000001!3d-32.933142000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0b97009d9fef%3A0xa10edc18d1fba694!2sMendotica!5e0!3m2!1ses!2sar!4v1698158469613!5m2!1ses!2sar"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                class="mapa"></iframe>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          </div>
-          <!--Grid column-->
+    </header>
+    <main class="container-fluid divClientes">
+      <hr class="featurete-divider">
+      <hr class="featurete-divider">
+      <div class="text-center">
+        <img src="Logos/logo-mendotica-horizontal.png" alt="logoMendotica" id="logoNosotros" class="img-fluid">
+        <h1>Nuestra cartera de clientes</h1>
+        <hr class="featurete-divider">
+        <p>
+          Tenemos el agrado de dirigirnos a ustedes con el fin de hacerles conocer nuestras
+          referencias comerciales en el mercado argentino:
+          Contamos con una vasta trayectoria en la que la experiencia es el principal pilar en
+          nuestra Empresa.
+        <p> Hace más de veinte años trabajamos con seriedad y responsabilidad para satisfacer
+          todos sus requerimientos y, nuestra labor se ha extendido más allá
+          de Mendoza, llegando al mercado de San Juan y Buenos Aires, por citar solo
+          algunos.</p>
+        <hr class="featurete-divider">
+        <p>Contamos con diferentes marcas de primer nivel, lo cual resulta muy beneficioso al
+          momento de hablar de seguridad, ya que dichos productos son de tecnología de
+          avanzada</p>
+        <p>En otras palabras, disponemos del equipo técnico, la experiencia, el conocimiento y la
+          trayectoria necesaria para cumplir con todo lo que su Empresa requiera, disponiendo de
+          lo mejor en tecnología.</p>
+        Nos es muy gratificante presentarles el detalle de los trabajos que hemos realizado.
+        Sin otro particular, y a la espera de su consulta, los saludamos muy cordialmente.
+        </p>
+        <div id="listaClientes">
+          <ul>
+            <li>Bodega Peñaflor</li>
+            <li>Empresa Green S.A</li>
+            <li>Complejo Palmares de presidente (unidades habitacionales privadas)</li>
+            <li>Loteo San Telmo</li>
+            <li>Archivo general de la provincia</li>
+            <li>Conjunto Urbano Los Cerros para Dalvian S.A </li>
+            <li>Denver concesionaria oficial Fiat</li>
+            <li>Hidroeléctrica Los Nihuiles</li>
+            <li>Bank Argentina S.A para Sr. Daniel Trajter – Pcia de Bs As </li>
+            <li>Basa-Banco de archivos para Sr. Gabriel Zakalik</li>
+            <div id="pdf">
+              <a href="comerciales.pdf" download="comerciales.pdf">Descargar cartera de clientes</a>
+            </div>
+          </ul>
         </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
+    </main>
+    <hr class="featurete-divider">
+    <!-- FOOTER -->
+    <footer class="footer-container">
+      <!-- Footer -->
+      <!-- Grid container -->
+      <div class="container p-4 text-center">
 
-    </div>
-    <!-- Grid container -->
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2023 Copyright:
-      <a href="index.html">mendotica.com</a>
-    </div>
-    <!-- Copyright -->
-    <!-- Footer -->
-  </footer>
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998; padding: 5px 14px;"
+            href="https://www.facebook.com/profile.php?id=100076163367246&mibextid=ZbWKwL" role="button"><i
+              class="fab fa-facebook-f"></i></a>
+          <!-- Instagram -->
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
+            href="https://instagram.com/mendotica?igshid=MzMyNGUyNmU2YQ==" role="button"><i
+              class="fab fa-instagram"></i></a>
+          <!-- Linkedin -->
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca"
+            href="https://www.linkedin.com/company/mendotica-argentina/" role="button"><i
+              class="fab fa-linkedin-in"></i></a>
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <ul class="list-unstyled mb-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26789.41269959977!2d-68.81692000000001!3d-32.933142000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0b97009d9fef%3A0xa10edc18d1fba694!2sMendotica!5e0!3m2!1ses!2sar!4v1698158469613!5m2!1ses!2sar"
+                  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  class="mapa"></iframe>
+              </ul>
+            </div>
+            <!--Grid column-->
 
-  <script src="script.js"></script>
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a href="index.html">mendotica.com</a>
+      </div>
+      <!-- Copyright -->
+      <!-- Footer -->
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
