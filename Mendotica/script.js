@@ -56,7 +56,6 @@ function hide_sugg() {
   document.getElementById('suggestions_container').style.top = "-100%";
 }
 
-
 //funciones de whatsapp
 function openform() {
   document.getElementById("myForm").style.display = "block";
@@ -65,7 +64,11 @@ function closeform() {
   document.getElementById("myForm").style.display = "none";
 }
 
-
+//funcion enviar formulario
+function recargar(){
+  window.location.reload();
+  alert("Formulario enviado correctamente")
+}
 
 //loader 
 document.addEventListener("DOMContentLoaded", function() {
@@ -73,5 +76,5 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
     document.getElementById("loader-container").style.display = "none";
     document.getElementById("content").style.display = "block";
-  }, 2000); // duracion del loader en ms
+  }, 1000); // duracion del loader en ms
 });

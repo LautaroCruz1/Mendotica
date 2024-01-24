@@ -269,7 +269,7 @@ a {
   box-shadow: 0px 1px 5px #000000;
   border-radius: 25px;
   right: 8px;
-  z-index: 100;
+  z-index: 102;
   animation: animacion 0.2s linear 0s 1 normal forwards;
 }
 
@@ -317,6 +317,7 @@ a {
 }
 
 /* CONVERSACION DEL POP UP */
+
 
 .msg-wp {
   margin: 0;
@@ -423,26 +424,58 @@ button img {
   border-radius: 100%;
 }
 
-/* FORMULARIO (CONTACTO) */
 
-.contenedor {
-  position: relative;
-  width: 100%;
+.contenedorFormulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
-}
-
-.form {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .titulo {
   position: absolute;
-  top: 20%;
+  top: 5%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 120px;
+  box-shadow: 2px 2px 10px #000000;
+  font-size: 20px;
+}
+
+.form>input {
+  background-color: #dddddd;
+  padding: 2px 70px;
+}
+
+.form>textarea {
+  background-color: #dddddd;
+  padding: 2px 25px;
+}
+
+.form>select {
+  background-color: #dddddd;
+  padding: 2px 40px;
+}
+
+
+#botonFormulario {
+  height: 50px;
+  width: 200px;
+  margin-left: 180px;
+}
+
+#botonFormulario:hover {
+  background-color: #F3D944;
 }
 
 /*Pestaña Nosotros.html*/
@@ -602,11 +635,14 @@ button img {
 }
 
 
+
+
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media screen and (min-width: 250px) AND (max-width: 900px) {
-
 
   #TextoCarusel {
     font-size: 30px;
@@ -684,11 +720,21 @@ button img {
     width: 100vw;
   }
 
-
   #navbarCollapse {
-    display: none;
+    background-color: #f3d944;
+    width: 100vw;
+    margin: 0;
+    padding: 3px;
+    float: inline-end;
+    margin-right: -12px;
   }
 
+
+  /* PESTAÑA NOSOTROS */
+
+  .divClientes {
+    padding: 30% 12%;
+  }
 
   /* Barra de busqueda */
   #main_container {
@@ -743,13 +789,6 @@ button img {
     font-size: 14px;
   }
 
-  /*wst buton*/
-
-  .box {
-    right: 40px;
-    top: 160px;
-  }
-
   /* nuestros clientes */
 
   .nuestrosClientes {
@@ -757,6 +796,7 @@ button img {
     width: 350px;
     height: 350px;
   }
+
 
   /*FOOTER*/
   .mapa {
@@ -769,10 +809,18 @@ button img {
 
 /*RESPONSIVE: LAPTOP (1024px)*/
 
-@media screen and (min-width:899px) AND (max-width:1025px) {
+@media screen and (min-width:902px) AND (max-width:1025px) {
 
   body {
     overflow: scroll;
+  }
+
+  /* dropdown de servicios (nav)*/
+
+  .dropdown-menu {
+    height: 250px;
+    width: 400px;
+    margin-left: 300px;
   }
 
   .carousel-item {
@@ -823,9 +871,67 @@ button img {
 
 }
 
+
+/* pestaña nosotros */
+
+
+.contenedorFormulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(/Mendotica/imagenesCarusel/esta\ es.jpeg);
+  background-repeat: no-repeat;
+  background-size: 1700px;
+}
+
+.titulo {
+  position: absolute;
+  top: 10%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 40px 80px;
+  box-shadow: 2px 2px 10px #000000;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.form>input {
+  background-color: #dddddd;
+  padding: 2px 70px;
+}
+
+.form>textarea {
+  background-color: #dddddd;
+  padding: 2px 25px;
+}
+
+.form>select {
+  background-color: #dddddd;
+  padding: 2px 40px;
+}
+
+
+#botonFormulario {
+  height: 50px;
+  width: 200px;
+  margin-left: 100px;
+}
+
+
 /*RESPONSIVE: TABLET (768px)*/
 
-@media screen and (min-width:768px) AND (max-width:898px) {
+@media screen and (min-width:576px) AND (max-width:900px) {
 
   /* dropdown de servicios (nav)*/
 
@@ -835,11 +941,8 @@ button img {
   }
 
 
-
-
-
   #imagenMendotica {
-    margin-left: 200px;
+    margin-left: 220px;
   }
 
   .navsize {
@@ -858,7 +961,7 @@ button img {
   }
 
   /*main*/
-  
+
   .d-block {
     height: 600px;
     width: 600px;
@@ -873,6 +976,13 @@ button img {
   .nuestrosClientes {
     height: 290px;
     width: 290px;
+  }
+
+
+  /* PESTAÑA NOSOTROS */
+
+  .divClientes {
+    padding: 15% 12%;
   }
 
   /*footer*/
@@ -890,7 +1000,6 @@ button img {
 
 @media screen and (min-width:250px) AND (max-width:320px) {
 
-
   .nuestrosClientes {
     height: 200px;
     width: 200px;
@@ -902,6 +1011,8 @@ button img {
   }
 
   /*wsp BUTTON*/
+
+
 
   h2.h1 {
     margin-top: 40px;
@@ -918,7 +1029,7 @@ button img {
     font-family: arial;
     position: absolute;
     text-align: start;
-    box-shadow: 1px 1px 10px #555
+    box-shadow: 1px 1px 10px #555;
   }
 
   .form-container {
@@ -956,4 +1067,503 @@ button img {
   }
 
 
+  /*Navbar*/
+
+  .navFont {
+    font-size: 21px;
+  }
+
+  #navbarCollapse {
+    background-color: #f3d944;
+    width: 100vw;
+    margin: 0;
+    padding: 3px;
+    float: inline-end;
+    margin-right: -12px;
+  }
+
+  .dropdown-menu {
+    font-size: 15px;
+    float: inline-end;
+  }
+
+
+
+  #imagenMendotica {
+    width: 220px;
+    margin-top: 5px;
+
+  }
+
+
+  /*pestaña contacto*/
+
+  .contenedorFormulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(/Mendotica/imagenesCarusel/esta\ es.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+  }
+
+  .titulo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px #000000;
+    font-size: 10px;
+    margin-top: 80px;
+    width: 280px;
+  }
+
+  .form>input {
+    background-color: #dddddd;
+    padding: 2px 20px;
+  }
+
+  .form>textarea {
+    background-color: #dddddd;
+    padding: 2px 10px;
+    width: 150px;
+  }
+
+  .form>select {
+    background-color: #dddddd;
+    padding: 2px 40px;
+    width: 150px;
+  }
+
+
+  #botonFormulario {
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+  }
+
+}
+
+
+/* OTRAS RESOLUCIONES  */
+
+@media screen and (min-width:60px) AND (max-width:249px) {
+
+  .nuestrosClientes {
+    width: 200px;
+    height: 200px;
+  }
+
+  .mapa {
+    width: 180px;
+    height: 180px;
+  }
+
+  #imagenMendotica {
+    width: 150px;
+  }
+
+}
+
+
+
+
+@media screen and (min-width:573px) AND (max-width:673px) {
+
+  .nav-item a {
+    margin-left: 40px;
+  }
+
+  /*pestaña contacto*/
+
+  .contenedorFormulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(/Mendotica/imagenesCarusel/esta\ es.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+  }
+
+  .titulo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px #000000;
+    font-size: 10px;
+    margin-top: 80px;
+    width: 300px;
+  }
+
+  .form>input {
+    background-color: #dddddd;
+    padding: 2px 20px;
+  }
+
+  .form>textarea {
+    background-color: #dddddd;
+    padding: 2px 10px;
+    width: 150px;
+  }
+
+  .form>select {
+    background-color: #dddddd;
+    padding: 2px 40px;
+    width: 150px;
+  }
+
+
+  #botonFormulario {
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+  }
+
+
+
+}
+
+
+@media screen and (min-width:321px) AND (max-width:369px) {
+
+  .nuestrosClientes {
+    height: 300px;
+    width: 300px;
+  }
+
+  /*pestaña contacto*/
+
+  .contenedorFormulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(/Mendotica/imagenesCarusel/esta\ es.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+  }
+
+  .titulo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px #000000;
+    font-size: 10px;
+    margin-top: 80px;
+    width: 300px;
+  }
+
+  .form>input {
+    background-color: #dddddd;
+    padding: 2px 20px;
+  }
+
+  .form>textarea {
+    background-color: #dddddd;
+    padding: 2px 10px;
+    width: 150px;
+  }
+
+  .form>select {
+    background-color: #dddddd;
+    padding: 2px 40px;
+    width: 150px;
+  }
+
+
+  #botonFormulario {
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+  }
+
+
+
+}
+
+
+@media screen and (min-width:251px) AND (max-width:288px) {
+
+  .mapa {
+    height: 200px;
+    width: 200px;
+  }
+
+  #imagenMendotica {
+    width: 200px;
+  }
+
+}
+
+@media screen and (min-width:322px) AND (max-width:345px) {
+
+  .mapa {
+    width: 250px;
+    height: 250px;
+  }
+
+}
+
+@media screen and (min-width:576px) AND (max-width:767px) {
+
+  .mapa {
+    width: 500px;
+    height: 250px;
+  }
+
+  /*pestaña contacto*/
+
+  .contenedorFormulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(/Mendotica/imagenesCarusel/esta\ es.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+  }
+
+  .titulo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px #000000;
+    font-size: 10px;
+    margin-top: 80px;
+    width: 300px;
+  }
+
+  .form>input {
+    background-color: #dddddd;
+    padding: 2px 20px;
+  }
+
+  .form>textarea {
+    background-color: #dddddd;
+    padding: 2px 10px;
+    width: 150px;
+  }
+
+  .form>select {
+    background-color: #dddddd;
+    padding: 2px 40px;
+    width: 150px;
+  }
+
+
+  #botonFormulario {
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+  }
+
+
+}
+
+
+@media screen and (min-width:902px) AND (max-width:991px) {
+
+  .mapa {
+    width: 700px;
+    height: 300px;
+  }
+
+}
+
+
+@media screen and (min-width:1026px) AND (max-width:1200px) {
+
+  .dropdown-menu {
+    margin-left: 350px;
+  }
+
+  .nuestrosClientes {
+    height: 300px;
+    width: 300px;
+  }
+
+  .mapa {
+    width: 900px;
+    height: 300px;
+  }
+
+}
+
+
+@media screen and (min-width:1201px) AND (max-width:1434px) {
+
+  .dropdown-menu {
+    margin-left: 350px;
+  }
+
+  .mapa {
+    width: 1100px;
+    height: 300px;
+  }
+
+}
+
+
+@media screen and (min-width:1400px) AND (max-width:1920px) {
+
+  .dropdown-menu {
+    margin-left: 350px;
+  }
+
+  .mapa {
+    width: 1300px;
+    height: 300px;
+  }
+
+}
+
+
+@media screen and (min-width:1921px) AND (max-width:2661px) {
+
+  .dropdown-menu {
+    margin-left: 350px;
+
+  }
+}
+
+
+@media screen and (min-width:369px) AND (max-width:572px) {
+  /*pestaña contacto*/
+
+  .contenedorFormulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(/Mendotica/imagenesCarusel/esta\ es.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+  }
+
+  .titulo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px #000000;
+    font-size: 10px;
+    margin-top: 80px;
+    width: 300px;
+  }
+
+  .form>input {
+    background-color: #dddddd;
+    padding: 2px 20px;
+  }
+
+  .form>textarea {
+    background-color: #dddddd;
+    padding: 2px 10px;
+    width: 150px;
+  }
+
+  .form>select {
+    background-color: #dddddd;
+    padding: 2px 40px;
+    width: 150px;
+  }
+
+
+  #botonFormulario {
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+  }
+
+  /* navBar */
+
+  .navFont {
+    font-size: 21px;
+  }
+
+  #navbarCollapse {
+    background-color: #f3d944;
+    width: 100vw;
+    margin: 0;
+    padding: 3px;
+    float: inline-end;
+    margin-right: -12px;
+  }
+
+  .dropdown-menu {
+    font-size: 15px;
+    float: inline-end;
+  }
+
+  #imagenMendotica {
+    width: 250px;
+    margin-top: 5px;
+  }
+
+
+  /* wsp button */
+  .box {
+    margin-top: 29px;
+  }
+
+  .open-button {
+    right: 20px;
+    z-index: 101;
+  }
+
+  .h1 h2{
+    margin-bottom: 0;
+  }
+
+  /* servicios */
+
+  .d-block {
+    width: 400px;
+    height: 400px;
+  }
 }

@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- PALABRAS CLAVES USANDO EL META / A MODIFICAR 
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -43,11 +42,11 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active brandfont" aria-current="page" href="index.html"
+                <a class="nav-link active brandfont navFont" aria-current="page" href="index.html"
                   style="color: black;">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active brandfont dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                <a class="nav-link active brandfont dropdown-toggle navFont" href="#" id="servicesDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
                   Servicios
                 </a>
@@ -60,10 +59,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active brandfont" href="contacto.html" style="color: black;">Contacto</a>
+                <a class="nav-link active brandfont navFont" href="contacto.html" style="color: black;">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active brandfont" href="nosotros.html" style="color: black;">Nosotros</a>
+                <a class="nav-link active brandfont navFont" href="nosotros.html" style="color: black;">Nosotros</a>
               </li>
             </ul>
             <div class="d-flex justify-content-center h-100">
@@ -80,51 +79,48 @@
     </header>
     <!--CAROUSEL--> <!-- MEDIDAS DE LA FOTO: 1309 X 928-->
     <main>
-
       <!--FORMULARIO-->
-      <!--tarda de 2 a  3 dias habiles en llegar-->
-      <div class="contenedor">
-        <h2 class="titulo">Formulario de Contacto</h2>
-        <form class="form" action="https://formsubmit.co/snochiasd@gmail.com" method="POST">
+      <div class="backgroundFormulario">
+        <div class="contenedorFormulario">
+          <form class="form" action="https://formsubmit.co/snochiasd@gmail.com" method="POST">
+            <h2 class="titulo">¡Contactanos!</h2>
+            <br>
+            <br>
+            <!-- Campo de texto para el nombre -->
+            <label for="nombre">Nombre y apellido:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
 
-          <!-- Campo de texto para el nombre -->
-          <label for="nombre">Nombre y apellido:</label>
-          <input type="text" id="nombre" name="nombre" required><br><br>
+            <!-- Campo de correo electrónico -->
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required><br><br>
 
-          <!-- Campo de correo electrónico -->
-          <label for="correo">Correo electrónico:</label>
-          <input type="email" id="correo" name="correo" required><br><br>
+            <!-- Campo de numero telefonico-->
+            <label for="numero">Numero de teléfono</label>
+            <input type="tel" id="numero" name="numero"><br><br>
 
-          <!-- Campo de numero telefonico-->
-          <label for="numero">Numero de teléfono</label>
-          <input type="tel" id="numero" name="numero"><br><br>
+            <!-- Campo de selección (por ejemplo, para elegir un motivo de contacto) -->
+            <label for="motivo" required>Selecciona el Servicio:</label>
+            <select id="motivo" name="motivo">
+              <option value="Electricidad" selected disabled>--Elegir una Opción--</option>
+              <option value="Sistema contra Incendios">Servicio contra Incendios</option>
+              <option value="Sistema de Electricidad">Sistema de Electricidad</option>
+              <option value="Circuito CCTV">Circuito CCTV</option>
+              <option value="Control de Acceso">Control de Acceso</option>
+              <option value="Sistema de Alarmas">Sistema de Alarmas</option>
+            </select><br><br>
 
-          <!-- Campo de selección (por ejemplo, para elegir un motivo de contacto) -->
-          <label for="motivo" required>Selecciona el Servicio:</label>
-          <select id="motivo" name="motivo">
-            <option value="Electricidad" selected disabled>--Elegir una Opción--</option>
-            <option value="Sistema contra Incendios">Servicio contra Incendios</option>
-            <option value="Sistema de Electricidad">Sistema de Electricidad</option>
-            <option value="Circuito CCTV">Circuito CCTV</option>
-            <option value="Control de Acceso">Control de Acceso</option>
-            <option value="Sistema de Alarmas">Sistema de Alarmas</option>
-          </select><br><br>
+            <!-- Campo de texto grande para comentarios -->
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
 
-          <!-- Campo de texto grande para comentarios -->
-          <label for="comentarios">Comentarios:</label><br>
-          <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+            <!-- Botón de envío -->
+            <input type="submit" value="Enviar" id="botonFormulario" onClick="recargar()">
 
-          <!-- Botón de envío -->
-          <input type="submit" value="Enviar">
-
-          <input type="hidden" name="_next" value="http://127.0.0.1:5500/Mendotica">
-          <input type="hidden" name="_captcha" value="false">
-        </form>
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/Mendotica">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
       </div>
-
-      </div>
-
-
       <!--BOTON DE WHATSAPP-->
       <button class="open-button" onclick="openform()"><b><img src="../Mendotica/Logos/whatsapp-logo.png"
             alt="wp"></b></button>
