@@ -70,6 +70,8 @@ function recargar(){
   alert("Formulario enviado correctamente")
 }
 
+
+
 //loader 
 document.addEventListener("DOMContentLoaded", function() {
   // Simula el tiempo de carga

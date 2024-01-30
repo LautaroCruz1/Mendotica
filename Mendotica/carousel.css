@@ -1,11 +1,13 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+html {
+  scroll-behavior: smooth;
+}
 body {
-  padding-top: 3rem;
   color: black;
-  font-family: 'Raleway', sans-serif;
-  background-color: rgb(255, 255, 255);
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgba(255, 255, 255, 0.377);
   margin: 0px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -26,7 +28,16 @@ a {
 /* SIZES */
 
 .navsize {
-  height: 100px;
+  height: 90px;
+}
+
+#navbarCollapse>ul {
+  margin-left: 400px;
+}
+
+#imagenMendotica {
+  height: 75px;
+  margin-left: 70px;
 }
 
 /* Barra de busqueda */
@@ -90,8 +101,14 @@ a {
 
 /* COLORES Y FUENTE DE MARCA */
 .brandcolor {
-  background-color: #F3D944;
+  /* background-color: #F3D944; */
+  background-color: #7b7b7bee;
 }
+
+.newcolor {
+  background-color: #F3D944
+}
+
 
 .brandfont {
   font-size: 25px;
@@ -200,7 +217,8 @@ a {
 /*CARRSUELL*/
 
 .carousel {
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
+  margin-top: 5.7rem;
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -215,7 +233,8 @@ a {
 }
 
 #TextoCarusel {
-  font-size: 32px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 
@@ -223,6 +242,12 @@ a {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
+
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -230,13 +255,67 @@ a {
 }
 
 .imgRedonda {
-  height: 200px;
-  width: 200px;
-  border-radius: 46%;
-  object-fit: contain;
-  filter: saturate(1.2);
-  box-shadow: 1px 1px 3px #000000
+  height: 600px;
+  width: 350px;
+  object-fit: cover;
+  box-shadow: 1px 1px 3px #000000;
+  transition: transform 0.2s ease-in-out;
 }
+
+.imgRedonda:hover {
+  cursor: pointer;
+}
+
+.imgOverlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+.serviciosContainer {
+  height: 600px;
+  width: 350px;
+  position: relative;
+  animation: fadeIn 3s linear;
+  margin-top: 35px;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  } 
+
+.serviciosContainer:hover .imgOverlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.serviciosContainer:hover {
+  transform: scale(1.1);
+}
+
 
 .marketing .col-lg-6 {
   margin-bottom: 1.5rem;
@@ -552,7 +631,7 @@ button img {
 }
 
 
-/* coso */
+/* loader */
 #loader-container {
   position: fixed;
   top: 0;
@@ -772,22 +851,13 @@ button img {
   .marketing .col-lg-4 {
     text-align: center;
     font-size: 14px;
-  }
+  } 
 
-  .imgRedonda {
-    height: 120px;
-    width: 120px;
-    border-radius: 46%;
-    object-fit: contain;
-    filter: saturate(1.2);
-    box-shadow: 1px 1px 3px #000000
-  }
-
-  .marketing .col-lg-6 {
+  /* .marketing .col-lg-6 {
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: 14px;
-  }
+  } */ */
 
   /* nuestros clientes */
 
@@ -1556,7 +1626,7 @@ button img {
     z-index: 101;
   }
 
-  .h1 h2{
+  .h1 h2 {
     margin-bottom: 0;
   }
 
